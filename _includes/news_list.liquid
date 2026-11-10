@@ -1,0 +1,18 @@
+{% comment %}
+  Shows the news items of _news/, newest first, with the month and the year of each item.
+  The date of an item comes from its file name, for example _news/2026-09-01-title.md.
+  Usage: {% include news_list.liquid %} or {% include news_list.liquid limit=5 %}
+{% endcomment %}
+{% assign items = site.news | reverse %}
+<div class="news">
+  <div class="table-responsive">
+    <table class="table table-sm table-borderless">
+      {% for item in items limit: include.limit %}
+        <tr>
+          <th scope="row">{{ item.date | date: '%b %Y' }}</th>
+          <td>{{ item.content | markdownify | remove: '<p>' | remove: '</p>' }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>

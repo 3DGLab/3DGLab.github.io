@@ -1,34 +1,97 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+# Links on author names in the publication lists.
+# The key is the last name in lower case without accents.
+# Each firstname must match the first name in _bibliography/papers.bib.
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"antolin":
+  - firstname: ["Pablo"]
+    url: https://people.epfl.ch/pablo.antolin
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"barton":
+  - firstname: ["Michael"]
+    url: https://www.bcamath.org/en/people/bcam-members/mbarton
 
-"bach":
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"bonneau":
+  - firstname: ["Georges-Pierre"]
+    url: https://team.inria.fr/craft/georges-pierre-bonneau/
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"buffa":
+  - firstname: ["Annalisa"]
+    url: https://people.epfl.ch/annalisa.buffa
 
-"przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"calleja-ochoa":
+  - firstname: ["Amaia"]
+    url: https://ekoizpen-zientifikoa.ehu.eus/investigadores/129844/detalle
 
-"schrodinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+"choi":
+  - firstname: ["Myung Geol"]
+    url: https://cg.catholic.ac.kr/~mgchoi/
 
-"lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
+"elber":
+  - firstname: ["Gershon"]
+    url: https://gershon.cs.technion.ac.il/
 
-"planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"elgeti":
+  - firstname: ["Stefanie"]
+    url: https://www.tuwien.at/mwbw/ilsb/en/team/team-leichtbau/stefanie-elgeti/
+
+"gomez escudero":
+  - firstname: ["Gaizka"]
+    url: https://ekoizpen-zientifikoa.ehu.eus/investigadores/129328/detalle
+
+"hahmann":
+  - firstname: ["Stefanie"]
+    url: https://team.inria.fr/craft/stefanie-hahmann/
+
+"hirschler":
+  - firstname: ["Thibaut"]
+    url: https://thibaut-hirschler.github.io/
+
+"hodgins":
+  - firstname: ["Jessica K."]
+    url: https://www.cs.cmu.edu/~jkh/
+
+"hong":
+  - firstname: ["Q Youn", "Qyoun"]
+    url: /people/professor/
+
+"hwang":
+  - firstname: ["Suil"]
+    url: https://suil-hwang.github.io/
+
+"juttler":
+  - firstname: ["Bert"]
+    url: https://www.ag.jku.at/jue_bio_en.htm
+
+"key":
+  - firstname: ["Konstantin"]
+    url: https://www.tuwien.at/mwbw/ilsb/en/team/team-leichtbau/konstantin-key/
+
+"kim":
+  - firstname: ["Myung-Soo"]
+    url: https://cse.snu.ac.kr/en/people/emeritus-faculty/104
+
+"kofler":
+  - firstname: ["Michael"]
+    url: https://mkofler96.github.io/cv/
+
+"lee":
+  - firstname: ["Kang Hoon"]
+    url: https://int.kw.ac.kr/people/faculty.html
+
+  - firstname: ["Jehee"]
+    url: https://mrl.snu.ac.kr/~jehee/
+
+"murai":
+  - firstname: ["Akihiko"]
+    url: https://sites.google.com/view/muraiakihiko/
+
+"park":
+  - firstname: ["Youngjin"]
+    url: https://youngjin-pnu.github.io/
+
+  - firstname: ["Sang Il"]
+    url: https://prof.sejong.ac.kr/sipark/index.do
+
+"yamane":
+  - firstname: ["Katsu"]
+    url: https://www.katsuyamane.com/

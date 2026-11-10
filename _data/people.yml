@@ -1,0 +1,51 @@
+# Lab members.
+# _includes/professor.liquid shows the professor as a profile.
+# _includes/students.liquid shows each student group as small cards, up to three in a row.
+#
+# Fields of a person:
+#   name     (required)
+#   role     (required) for alumni, write the degree and the year
+#   image    photo file name in assets/img/people/. Without it, a card shows the lab symbol.
+#   email, website, scholar (Google Scholar user ID), github (user name)
+#
+# To add a student group, add an entry with a title and its members to "students".
+
+professor:
+  name: Q Youn Hong
+  role: Assistant Professor
+  image: q_youn_hong.jpg
+  email: qhong83@hanyang.ac.kr
+  scholar: ISoHBUgAAAAJ
+  interests:
+    - Computer graphics
+    - Computer-aided design
+    - Geometry processing
+  education:
+    - year: 2020
+      text: PhD, Seoul National University
+    - year: 2015
+      text: MS, Carnegie Mellon University
+    - year: 2006
+      text: BS, Seoul National University
+  experience:
+    - year: 2022 – present
+      text: Assistant Professor, Hanyang University ERICA
+    - year: 2020 – 2022
+      text: Postdoctoral Fellow, Faculty of Computer Science, Technion – Israel Institute of Technology
+
+students:
+  - title: PhD Students
+    members:
+      - name: Suil Hwang
+        role: PhD Student
+        image: suil_hwang.webp
+        email: av600md@hanyang.ac.kr
+        website: https://suil-hwang.github.io/
+        scholar: 6nFk04UAAAAJ
+        github: suil-hwang
+  - title: MS Students
+    members: []
+  - title: Alumni
+    members:
+      - name: Jaeung Jeong
+        role: MS, 2026

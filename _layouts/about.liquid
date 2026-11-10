@@ -1,0 +1,28 @@
+---
+layout: default
+---
+{% comment %}
+  Local override of al_folio_core for the home page.
+  The title is the lab logo. The lab symbol floats at the right of the text of the page.
+  After the text come the news and the recent publications.
+  _bibliography/papers.bib has the newest paper first, so "--max 2" shows the two newest papers.
+{% endcomment %}
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">{% include logo.liquid name="lockup-inline" class="site-logo" %}</h1>
+    <p class="desc">{{ page.subtitle }}</p>
+  </header>
+
+  <article class="home">
+    <div class="home-intro clearfix">
+      <div class="home-symbol">{% include logo.liquid name="symbol" %}</div>
+      {{ content }}
+    </div>
+
+    <h2><a href="{{ '/news/' | relative_url }}">News</a></h2>
+    {% include news_list.liquid limit=5 %}
+
+    <h2><a href="{{ '/publications/' | relative_url }}">Recent publications</a></h2>
+    <div class="publications">{% bibliography --group_by none --max 2 %}</div>
+  </article>
+</div>

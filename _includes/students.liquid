@@ -1,0 +1,31 @@
+{% comment %}
+  Shows each student group of _data/people.yml as small cards, up to three in a row.
+  A group without members shows its title and a short note.
+  The root element starts in the first column. As a result, a Markdown page does not show the indented HTML as code.
+  The styles are in _includes/header.liquid.
+{% endcomment %}
+<div class="people">
+  {% for group in site.data.people.students %}
+    <h2>{{ group.title }}</h2>
+    {% if group.members.size > 0 %}
+      <div class="people-grid">
+        {% for person in group.members %}
+          <div class="person-card">
+            {% if person.image %}
+              <img class="person-photo" src="{{ person.image | prepend: '/assets/img/people/' | relative_url }}" alt="{{ person.name }}">
+            {% else %}
+              <img class="person-photo person-photo-empty" src="{{ '/assets/img/logo/3dglab-symbol-lambert.svg' | relative_url }}" alt="">
+            {% endif %}
+            <div class="person-text">
+              <h3>{{ person.name }}</h3>
+              <p>{{ person.role }}</p>
+              {% include person_links.liquid person=person %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="people-empty">No members at this time.</p>
+    {% endif %}
+  {% endfor %}
+</div>

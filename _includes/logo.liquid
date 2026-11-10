@@ -1,0 +1,8 @@
+{% comment %}
+  Shows a lab logo that follows the light theme or the dark theme.
+  The files are assets/img/logo/3dglab-NAME.svg and assets/img/logo/3dglab-NAME-dark.svg.
+  Usage: {% include logo.liquid name="lockup-inline" class="site-logo" %}
+{% endcomment %}
+{% assign logo = '/assets/img/logo/3dglab-' | append: include.name %}
+<img class="only-light {{ include.class }}" src="{{ logo | append: '.svg' | relative_url }}" alt="{{ site.title }}">
+<img class="only-dark {{ include.class }}" src="{{ logo | append: '-dark.svg' | relative_url }}" alt="{{ site.title }}">

@@ -1,0 +1,48 @@
+{% comment %}
+  Shows the links of one person: email, website, Google Scholar, GitHub.
+  Without "labels", each link is a round icon button and its text is for screen readers only.
+  With labels=true, each link shows its icon and its text in a list.
+  A person without links gets no output.
+  Usage: {% include person_links.liquid person=person %}
+{% endcomment %}
+{% assign p = include.person %}
+{% assign icons = '/assets/img/icons.svg' | relative_url %}
+{% unless include.labels %}
+  {% assign text_class = 'sr-only' %}
+{% endunless %}
+{% if p.email or p.website or p.scholar or p.github %}
+  <div class="person-links {% if include.labels %}labeled{% else %}buttons{% endif %}">
+    {% if p.email %}
+      <a href="mailto:{{ p.email }}" title="Email">
+        <svg class="icon" aria-hidden="true">
+          <use href="{{ icons }}#envelope"></use>
+        </svg>
+        <span class="{{ text_class }}">{{ p.email }}</span>
+      </a>
+    {% endif %}
+    {% if p.website %}
+      <a href="{{ p.website }}" title="Website">
+        <svg class="icon" aria-hidden="true">
+          <use href="{{ icons }}#house"></use>
+        </svg>
+        <span class="{{ text_class }}">Website</span>
+      </a>
+    {% endif %}
+    {% if p.scholar %}
+      <a href="https://scholar.google.com/citations?user={{ p.scholar }}" title="Google Scholar">
+        <svg class="icon" aria-hidden="true">
+          <use href="{{ icons }}#google-scholar"></use>
+        </svg>
+        <span class="{{ text_class }}">Google Scholar</span>
+      </a>
+    {% endif %}
+    {% if p.github %}
+      <a href="https://github.com/{{ p.github }}" title="GitHub">
+        <svg class="icon" aria-hidden="true">
+          <use href="{{ icons }}#github"></use>
+        </svg>
+        <span class="{{ text_class }}">GitHub</span>
+      </a>
+    {% endif %}
+  </div>
+{% endif %}

@@ -1,0 +1,36 @@
+{% comment %}
+  Shows the profile of the professor from _data/people.yml.
+  The left column has the photo, the name, and the links. The right column has the lists.
+  The styles are in _includes/header.liquid.
+{% endcomment %}
+{% assign person = site.data.people.professor %}
+<div class="pi-profile">
+  <div class="pi-profile-side">
+    <img class="pi-profile-photo" src="{{ person.image | prepend: '/assets/img/people/' | relative_url }}" alt="{{ person.name }}">
+    <h2>{{ person.name }}</h2>
+    <p>{{ person.role }}</p>
+    <p class="pi-profile-affiliation">
+      <a href="{{ site.affiliation.school_url }}">{{ site.affiliation.school }}</a><br>
+      <a href="{{ site.affiliation.university_url }}">{{ site.affiliation.university }}</a>
+    </p>
+    {% include person_links.liquid person=person labels=true %}
+  </div>
+  <div class="pi-profile-main">
+    <h3>Research interests</h3>
+    <ul class="pi-profile-tags">
+      {% for item in person.interests %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+    {% assign sections = 'education,experience' | split: ',' %}
+    {% for section in sections %}
+      <h3>{{ section | capitalize }}</h3>
+      <dl class="pi-profile-timeline">
+        {% for item in person[section] %}
+          <dt>{{ item.year }}</dt>
+          <dd>{{ item.text }}</dd>
+        {% endfor %}
+      </dl>
+    {% endfor %}
+  </div>
+</div>
