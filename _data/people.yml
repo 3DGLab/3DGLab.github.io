@@ -44,7 +44,10 @@ students:
         scholar: 6nFk04UAAAAJ
         github: suil-hwang
   - title: MS Students
-    members: []
+    members:
+      - name: Junyu Chen
+        role: MS Student
+        email: chenjunyu@hanyang.ac.kr
   - title: Alumni
     members:
       - name: Jaeung Jeong
