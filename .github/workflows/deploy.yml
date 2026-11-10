@@ -69,7 +69,8 @@ jobs:
         uses: lycheeverse/lychee-action@v2.9.0
         with:
           fail: true
-          args: --offline --remap '_site(/?.*)/assets/(.*) _site/assets/$2' --verbose --no-progress '_site/**/*.html'
+          # Every internal link of the site starts with "/". The root dir tells lychee which folder "/" is.
+          args: --offline --root-dir ${{ github.workspace }}/_site --verbose --no-progress '_site/**/*.html'
       - name: Check the format 🔎
         run: npm run lint:prettier
       - name: Check the theme contract 🧪
