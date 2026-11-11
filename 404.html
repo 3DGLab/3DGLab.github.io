@@ -92,6 +92,22 @@
       width: 20%;
     }
 
+    /* Publication lists (_layouts/bib.liquid): the name of a lab member is bold. A link on a name does not change its weight. */
+    .publications .lab-author {
+      font-weight: 500;
+    }
+    /* A link on the name of another author has the color of the text and a gray dashed line.
+       With the pointer or the keyboard focus on it, the theme makes the line solid, and here the line takes the color of the text.
+       A link of a lab member is inside the "lab-author" element, so it keeps the accent color. */
+    .publications ol.bibliography li div.author > a {
+      color: var(--global-text-color);
+      border-bottom-color: var(--global-text-color-light);
+    }
+    .publications ol.bibliography li div.author > a:hover,
+    .publications ol.bibliography li div.author > a:focus-visible {
+      border-bottom-color: var(--global-text-color);
+    }
+
     /* Student cards (_includes/students.liquid): small cards, as many in a row as the width holds.
        That is three on a wide screen and one on a phone. */
     .people-grid {
