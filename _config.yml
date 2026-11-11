@@ -326,7 +326,7 @@ display_categories: [] # these categories will be displayed on the front page of
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [] # empty: _data/coauthors.yml links each lab member name
+  last_name: [] # not used: _layouts/bib.liquid makes the lab members of _data/people.yml bold
   first_name: []
 
   style: apa

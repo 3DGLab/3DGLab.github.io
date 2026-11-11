@@ -1,6 +1,8 @@
 # Lab members.
 # _includes/professor.liquid shows the professor as a profile.
 # _includes/students.liquid shows each student group as small cards, up to three in a row.
+# _layouts/bib.liquid makes these names bold in the publication lists.
+# For that, a name here must match the author name in _bibliography/papers.bib.
 #
 # Fields of a person:
 #   name     (required)
