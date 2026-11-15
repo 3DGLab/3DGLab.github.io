@@ -1,7 +1,9 @@
 ---
 ---
 {% comment %}
-  Local override of al_folio_core for one publication. Only the author block differs from the theme file.
+  Local override of al_folio_core for one publication. The author block and the venue line differ from the theme file.
+  A paper that was presented at a conference has a "venue" field, for example "Pacific Graphics 2026". The venue
+  line shows it in place of the journal or the book title, and without the date, because the venue has the year.
   The name of a lab member is bold. The lab members are the people of _data/people.yml, alumni included.
   The link on a name is separate and comes from _data/coauthors.yml, for lab members and for other authors.
   The theme file makes one name stand out with "scholar.last_name" and that name gets no link.
@@ -173,7 +175,9 @@
     <!-- Journal/Book title and date -->
     {% assign proceedings = 'inproceedings,incollection' | split: ',' %}
     {% assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' %}
-    {% if entry.type == 'article' %}
+    {% if entry.venue %}
+      {% capture entrytype %}<em>{{ entry.venue }}</em>{% endcapture %}
+    {% elsif entry.type == 'article' %}
       {% capture entrytype %}<em>{{ entry.journal }}</em>{% endcapture %}
     {% elsif proceedings contains entry.type %}
       {% capture entrytype %}<em>In {{ entry.booktitle }}</em>{% endcapture %}
@@ -183,13 +187,15 @@
       {% capture entrytype %}{% endcapture %}
     {% endif %}
     {% assign entrymonth = '' %}
-    {% if entry.month %}
-      {% capture entrymonth %}{{ " " }}{{ entry.month | capitalize }}{% endcapture %}
-    {% endif %}
     {% assign entryyear = '' %}
-    {% if entry.year %}
-      {% capture entryyear %}{{ " " }}{{ entry.year }}{% endcapture %}
-    {% endif %}
+    {% unless entry.venue %}
+      {% if entry.month %}
+        {% capture entrymonth %}{{ " " }}{{ entry.month | capitalize }}{% endcapture %}
+      {% endif %}
+      {% if entry.year %}
+        {% capture entryyear %}{{ " " }}{{ entry.year }}{% endcapture %}
+      {% endif %}
+    {% endunless %}
     {% if entry.location %}
       {% capture entrytype %}{{ entrytype }}{{ ", " }}{{ entry.location }}{% endcapture %}
     {% endif -%}

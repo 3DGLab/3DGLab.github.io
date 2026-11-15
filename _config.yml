@@ -188,8 +188,6 @@ newsletter:
 collections:
   news:
     output: false
-  projects:
-    output: true
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -386,6 +384,7 @@ filtered_bibtex_keywords:
     selected,
     slides,
     supp,
+    venue,
     video,
     website,
   ]
