@@ -1,12 +1,4 @@
 /* From https://github.com/dunovank/jupyter-themes/blob/master/jupyterthemes/styles/compiled/grade3.css */
-div#notebook {
-  font-family: sans-serif;
-  font-size: 13pt;
-  line-height: 170%;
-  color: #303030;
-  -webkit-font-smoothing: antialiased !important;
-  padding-top: 25px !important;
-}
 
 body,
 div.body {
@@ -37,24 +29,10 @@ body > #header {
   z-index: 100;
 }
 
-input[type="radio"],
+
 input[type="checkbox"] {
   margin-top: 1px;
   line-height: normal;
-}
-
-.breadcrumb > li {
-  font-size: 12pt;
-  color: #303030;
-  border: none;
-  text-shadow: none !important;
-}
-
-.breadcrumb > li + li:before {
-  content: "/\00a0";
-  padding: 0px;
-  color: #303030;
-  font-size: 18px;
 }
 
 ul#tabs a {
@@ -68,12 +46,6 @@ ul#tabs a {
 .nav > li.disabled > a,
 .nav > li.disabled > a:hover {
   color: #828892;
-}
-
-div#notebook {
-  font-family: sans-serif;
-  font-size: 13pt;
-  padding-top: 4px;
 }
 
 .container {
@@ -252,66 +224,6 @@ div#notebook {
   line-height: inherit;
 }
 
-button.close {
-  border: 0px none;
-  font-family: sans-serif;
-  font-size: 20pt;
-  font-weight: normal;
-}
-
-.close {
-  color: #de143d;
-  opacity: 0.5;
-  text-shadow: none;
-  font-weight: normal;
-}
-
-.close:hover {
-  color: #de143d;
-  opacity: 1;
-  font-weight: normal;
-}
-
-div.modal > button,
-div.modal-footer > button {
-  background: #e4e4e4;
-  background-color: #e4e4e4;
-  border-color: #e4e4e4;
-}
-
-div.modal > button:hover,
-div.modal-footer > button:hover {
-  background: #dfdfdf;
-  background-color: #dfdfdf;
-  border-color: #dfdfdf;
-  transition: 200ms ease;
-}
-
-.modal-content {
-  font-family: sans-serif;
-  font-size: 12pt;
-  position: relative;
-  background: #e4e4e4;
-  background-color: #e4e4e4;
-  border: none;
-  border-radius: 1px;
-  background-clip: padding-box;
-  outline: none;
-}
-
-.modal-body {
-  background-color: #ffffff;
-  position: relative;
-  padding: 15px;
-}
-
-.modal-footer {
-  padding: 8px;
-  text-align: right;
-  background-color: #ffffff;
-  border-top: none;
-}
-
 div.panel,
 .panel {
   font-family: sans-serif;
@@ -386,7 +298,7 @@ textarea {
   width: 11px;
 }
 
-HTML,
+
 body,
 div,
 dl,
@@ -400,7 +312,6 @@ h2,
 h3,
 pre,
 code,
-form,
 input,
 button,
 textarea,
@@ -445,8 +356,7 @@ div.cell.selected:before {
 }
 
 pre,
-code,
-kbd {
+code {
   white-space: pre-wrap;
 }
 
@@ -459,16 +369,6 @@ code {
   background: #efefef;
   background-color: #efefef;
   border-color: #efefef;
-}
-
-kbd {
-  padding: 1px;
-  font-size: 11pt;
-  font-weight: 800;
-  color: #303030;
-  background-color: transparent !important;
-  border: 0;
-  box-shadow: none;
 }
 
 pre {
@@ -498,23 +398,4 @@ pre {
   -webkit-box-shadow: none;
   box-shadow: none;
   z-index: 10;
-}
-
-
-.MathJax {
-  border: 0 !important;
-  font-size: 100% !important;
-  text-align: center !important;
-  margin: 0em !important;
-  line-height: 2.25 !important;
-}
-
-.MathJax:focus,
-body :focus .MathJax {
-  display: inline-block !important;
-}
-
-.MathJax:focus,
-body :focus .MathJax {
-  display: inline-block !important;
 }
