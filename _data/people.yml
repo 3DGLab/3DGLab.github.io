@@ -49,6 +49,7 @@ students:
     members:
       - name: Junyu Chen
         role: MS Student
+        image: junyu_chen.jpg
         email: chenjunyu@hanyang.ac.kr
   - title: Undergraduate Students
     members: []
