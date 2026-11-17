@@ -50,6 +50,8 @@ students:
       - name: Junyu Chen
         role: MS Student
         email: chenjunyu@hanyang.ac.kr
+  - title: Undergraduate Students
+    members: []
   - title: Alumni
     members:
       - name: Jaeung Jeong

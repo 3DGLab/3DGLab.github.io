@@ -90,6 +90,12 @@
     .news th {
       width: 20%;
     }
+    /* The theme gives every ".table" a fixed dark text color. In the dark theme, a script makes it light
+       after the page is parsed, so the news text was dark on dark in the first frames.
+       The text color of the theme needs no script, and the news text has the color of the other text. */
+    .news .table {
+      color: var(--global-text-color);
+    }
 
     /* Publication lists (_layouts/bib.liquid): the name of a lab member is bold and has the accent color, with or without a link. */
     .publications .lab-author {
