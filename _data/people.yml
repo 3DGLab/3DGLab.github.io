@@ -52,7 +52,10 @@ students:
         image: junyu_chen.jpg
         email: chenjunyu@hanyang.ac.kr
   - title: Undergraduate Students
-    members: []
+    members:
+      - name: Suhwan Choi
+        role: Undergraduate Student
+        email: sohal03@hanyang.ac.kr
   - title: Alumni
     members:
       - name: Jaeung Jeong
